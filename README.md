@@ -54,4 +54,8 @@
 
 <img src="https://raw.githubusercontent.com/MeatBxll/MeatBxll/output/snake.svg" alt="Snake animation" />
 
-###
+## 💻 LeetCode Stats
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/MeatBxll?theme=dark)](https://leetcode.com/MeatBxll/)
+
+### 📝 Solved Problems
