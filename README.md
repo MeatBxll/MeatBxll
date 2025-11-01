@@ -10,14 +10,15 @@ const leetcode = require("./sections/leetcode");
 
 (async () => {
 try {
-const sections = [
-header(),
-githubStats(),
-snake(),
-await leetcode(),
-];
+let readme = fs.readFileSync(readmePath, "utf8");
 
-    fs.writeFileSync(readmePath, sections.join("\n\n"), "utf8");
+    readme = readme
+      .replace("<!-- HEADER_SECTION -->", header())
+      .replace("<!-- GITHUB_STATS_SECTION -->", githubStats())
+      .replace("<!-- SNAKE_SECTION -->", snake())
+      .replace("<!-- LEETCODE_SECTION -->", await leetcode());
+
+    fs.writeFileSync(readmePath, readme, "utf8");
     console.log("✅ README.md updated with all sections");
 
 } catch (err) {

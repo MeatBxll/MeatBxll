@@ -19,11 +19,13 @@
   "author": "Anthony Mancini",
   "license": "MIT",
   "dependencies": {
-    "leetcode-api": "^1.0.5"
+    "leetcode-api": "^1.0.5",
+    "leetcode-stats": "^2.0.10",
+    "node-fetch": "^2.7.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2",
     "eslint": "^8.47.0",
+    "nodemon": "^3.0.2",
     "prettier": "^3.0.0"
   }
 }

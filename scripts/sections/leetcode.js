@@ -1,29 +1,27 @@
-const leetcode = require("leetcode-api");
-const fs = require("fs");
-const path = require("path");
+const leet = require("leetcode-stats");
 
 const username = "MeatBxll";
-const solutionsDir = path.join(__dirname, "../../solutions");
 
 module.exports = async () => {
-  const submissions = await leetcode.userSolvedProblems(username);
+  try {
+    const stats = await leet.getStats(username);
 
-  const tableRows = submissions.map((p) => {
-    const difficulty = p.difficulty;
-    const name = p.title;
-    const slug = p.titleSlug;
-    const solutionFile = fs.existsSync(path.join(solutionsDir, `${slug}.ts`))
-      ? `./solutions/${slug}.ts`
-      : "#";
-    return `| ${name} | ${difficulty} | ✅ | [Link](${solutionFile}) |`;
-  });
+    const table = `
+## 💻 LeetCode Stats
 
-  return [
-    "## 💻 LeetCode Stats",
-    `[![LeetCode Stats](https://leetcard.jacoblin.cool/MeatBxll?theme=dark)](https://leetcode.com/MeatBxll/)`,
-    "### 📝 Solved Problems",
-    "| Problem | Difficulty | Status | Solution |",
-    "|---------|------------|--------|----------|",
-    ...tableRows,
-  ].join("\n");
+- **Total Solved:** ${stats.totalSolved}
+- **Easy:** ${stats.easySolved} / ${stats.totalEasy}
+- **Medium:** ${stats.mediumSolved} / ${stats.totalMedium}
+- **Hard:** ${stats.hardSolved} / ${stats.totalHard}
+- **Acceptance Rate:** ${stats.acRate}%
+- **Ranking:** ${stats.ranking}
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/${username}?theme=dark)](https://leetcode.com/${username}/)
+`;
+
+    return table;
+  } catch (err) {
+    console.error("Error fetching LeetCode stats:", err);
+    return "LeetCode stats could not be loaded.";
+  }
 };
