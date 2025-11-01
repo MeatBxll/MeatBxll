@@ -1,37 +1,25 @@
 const fs = require("fs");
 const path = require("path");
-const leetcode = require("leetcode-api");
 
-const username = "MeatBxll";
 const readmePath = path.join(__dirname, "../README.md");
-const solutionsDir = path.join(__dirname, "../solutions");
+
+const header = require("./sections/header");
+const githubStats = require("./sections/github-stats");
+const snake = require("./sections/snake");
+const leetcode = require("./sections/leetcode");
 
 (async () => {
   try {
-    const submissions = await leetcode.userSolvedProblems(username);
-
-    const tableRows = submissions.map((p) => {
-      const difficulty = p.difficulty;
-      const name = p.title;
-      const slug = p.titleSlug;
-      const solutionFile = fs.existsSync(path.join(solutionsDir, `${slug}.ts`))
-        ? `./solutions/${slug}.ts`
-        : "#";
-      return `| ${name} | ${difficulty} | ✅ | [Link](${solutionFile}) |`;
-    });
-
-    const table = [
-      "| Problem | Difficulty | Status | Solution |",
-      "|---------|------------|--------|----------|",
-      ...tableRows,
-    ].join("\n");
-
     let readme = fs.readFileSync(readmePath, "utf8");
 
-    readme = readme.replace(/<!-- LEETCODE_TABLE -->/g, table);
+    readme = readme
+      .replace("<!-- HEADER_SECTION -->", header())
+      .replace("<!-- GITHUB_STATS_SECTION -->", githubStats())
+      .replace("<!-- SNAKE_SECTION -->", snake())
+      .replace("<!-- LEETCODE_SECTION -->", await leetcode());
 
     fs.writeFileSync(readmePath, readme, "utf8");
-    console.log("✅ README.md updated with LeetCode problems");
+    console.log("✅ README.md updated with all sections");
   } catch (err) {
     console.error(err);
   }
