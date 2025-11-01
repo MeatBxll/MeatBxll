@@ -54,8 +54,8 @@
 
 <img src="https://raw.githubusercontent.com/MeatBxll/MeatBxll/output/snake.svg" alt="Snake animation" />
 
-<h2 align="center">## 💻 LeetCode Stats </h2>
+<h2 align="center">💻 LeetCode Stats </h2>
 
 <div align="center">
-[![LeetCode Stats](https://leetcard.jacoblin.cool/MeatBxll?theme=dark)](https://leetcode.com/MeatBxll/)
+  [![LeetCode Stats](https://leetcard.jacoblin.cool/MeatBxll?theme=dark)](https://leetcode.com/MeatBxll/)
 </div>
