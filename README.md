@@ -37,11 +37,11 @@
   <a href="https://www.instagram.com/oldlife252/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
   </a>
-  <a href="discordapp.com/users/650888765987880961" target="_blank">
+  <a href="https://www.discordapp.com/users/650888765987880961" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
   </a>
-  <a href="mailto:anthonymancini27@gmail.com" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
+  <a href="https://leetcode.com/MeatBxll/" target="_blank">
+    <img src="https://img.shields.io/badge/LeetCode-FFA400?style=for-the-badge&logo=LeetCode&logoColor=white" height="35" alt="LeetCode profile" />
   </a>
   <a href="https://www.linkedin.com/in/anthony-mancini-a3984035a/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
@@ -54,8 +54,9 @@
 
 <img src="https://raw.githubusercontent.com/MeatBxll/MeatBxll/output/snake.svg" alt="Snake animation" />
 
-<h2 align="center">💻 LeetCode Stats </h2>
-
+<h2 align="center">💻 LeetCode Stats</h2>
 <div align="center">
-  [![LeetCode Stats](https://leetcard.jacoblin.cool/MeatBxll?theme=dark)](https://leetcode.com/MeatBxll/)
+  <a href="https://leetcode.com/MeatBxll/">
+    <img src="https://leetcard.jacoblin.cool/MeatBxll?theme=dark" alt="LeetCode Stats" />
+  </a>
 </div>
