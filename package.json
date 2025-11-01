@@ -1,31 +1,14 @@
 {
   "name": "leetcode-readme",
   "version": "1.0.0",
-  "description": "Automatically updates README.md with LeetCode solved problems and stats",
-  "type": "commonjs",
-  "main": "scripts/update-readme.js",
   "scripts": {
-    "update-readme": "node scripts/update-readme.js",
-    "dev": "nodemon scripts/update-readme.js",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "update-readme": "node scripts/update-readme.js"
   },
-  "keywords": [
-    "leetcode",
-    "github",
-    "readme",
-    "automation"
-  ],
-  "author": "Anthony Mancini",
-  "license": "MIT",
   "dependencies": {
-    "leetcode-api": "^1.0.5",
-    "leetcode-stats": "^2.0.10",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^3.4.0",
+    "leetcode-api": "^1.0.5"
   },
-  "devDependencies": {
-    "eslint": "^8.47.0",
-    "nodemon": "^3.0.2",
-    "prettier": "^3.0.0"
+  "engines": {
+    "node": ">=18"
   }
 }
